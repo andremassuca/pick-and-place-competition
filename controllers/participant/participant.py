@@ -60,7 +60,7 @@ fingerMaxPosition = finger1.getMaxPosition()
 #distancia percorrida = raio roda * angulo percorrido
 #distancia percorrida = 0.05*58.24 = 2.912m
 #https://github.com/cyberbotics/pick-and-place-competition/blob/main/controllers/participant/participant.py#L61
-omega=7.0 #mudar este valor para os valores pedidos no enunciado
+omega=14.0 #mudar este valor para os valores pedidos no enunciado
 angulo_percorrido=2.912/0.05
 
 temporizador = angulo_percorrido/omega
