@@ -32,7 +32,7 @@ armMotors.append(robot.getDevice("arm5"))
 armMotors[0].setVelocity(0.2)
 armMotors[1].setVelocity(0.5)
 armMotors[2].setVelocity(0.5)
-armMotors[3].setVelocity(0.7)
+armMotors[3].setVelocity(1.2)
 
 # Initialize arm position sensors.
 # These sensors can be used to get the current joint position and monitor the joint movements.
@@ -77,8 +77,8 @@ for wheel in wheels:
 # Move arm and open gripper.
 armMotors[0].setPosition(0.05)
 armMotors[1].setPosition(-0.55)
-armMotors[2].setPosition(-0.9)
-armMotors[3].setPosition(-1.5)
+armMotors[2].setPosition(-0.95)
+armMotors[3].setPosition(-1.35)
 finger1.setPosition(fingerMaxPosition)
 finger2.setPosition(fingerMaxPosition)
 
