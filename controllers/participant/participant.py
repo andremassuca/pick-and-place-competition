@@ -32,7 +32,7 @@ armMotors.append(robot.getDevice("arm5"))
 armMotors[0].setVelocity(0.2)
 armMotors[1].setVelocity(0.5)
 armMotors[2].setVelocity(0.5)
-armMotors[3].setVelocity(0.3)
+armMotors[3].setVelocity(0.7)
 
 # Initialize arm position sensors.
 # These sensors can be used to get the current joint position and monitor the joint movements.
@@ -60,7 +60,7 @@ fingerMaxPosition = finger1.getMaxPosition()
 #distancia percorrida = raio roda * angulo percorrido
 #distancia percorrida = 0.05*58.24 = 2.912m
 #https://github.com/cyberbotics/pick-and-place-competition/blob/main/controllers/participant/participant.py#L61
-omega=14.0 #mudar este valor para os valores pedidos no enunciado
+omega=12.0 #mudar este valor para os valores pedidos no enunciado
 angulo_percorrido=2.912/0.05
 
 temporizador = angulo_percorrido/omega
@@ -83,7 +83,7 @@ finger1.setPosition(fingerMaxPosition)
 finger2.setPosition(fingerMaxPosition)
 
 # Controlo em malha fechada, utilizando o sensor de posição do angulo do motor
-delta_angulo = 0.25
+delta_angulo = 0.15
 while robot.step(timestep) != -1:
     if abs(armPositionSensors[3].getValue() - (-1.5)) < delta_angulo:
         # Motion completed.
