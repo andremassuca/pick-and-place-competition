@@ -166,7 +166,9 @@ armMotors[2].setPosition(-0.3)
 robot.step(200 * timestep)
 
 armMotors[1].setPosition(-1.0)
-robot.step(200 * timestep)
+while robot.step(timestep) != -1:
+    if abs(armPositionSensors[1].getValue() - (-1.0)) < delta_angulo:
+        break
 
 armMotors[3].setPosition(-1.0)
 robot.step(200 * timestep)
